@@ -1,16 +1,109 @@
-# React + Vite
+# Employee Management System – Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web-based Employee Management System built with React and Vite. This application provides an interface for managing employee information through a Spring Boot REST API.
 
-Currently, two official plugins are available:
+## Technologies Used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React
+- JavaScript (ES6+)
+- Vite
+- HTML5
+- CSS3
+- Fetch API
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Display a list of employees
+- Search employees by name
+- View employee details
+- Add new employees
+- Edit existing employee information
+- Delete employees
+- Form validation and error handling
+- Handle API errors, including 404 Not Found
+- Display server connection errors
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```text
+src/
+├── components/
+│   ├── AddEmployee/
+│   ├── EditEmployee/
+│   ├── DeleteEmployee/
+│   └── ViewEmployee/
+├── services/
+│   └── employeeService.js
+├── App.jsx
+└── main.jsx
+```
+
+## Requirements
+
+- Node.js
+- npm
+- Employee Management System Backend running on port 8080
+
+## Installation and Setup
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/quanlh87usa/employee-management-frontend.git
+```
+
+2. Navigate to the frontend directory:
+
+```bash
+cd employee-management-frontend
+```
+
+3. Install dependencies:
+
+```bash
+npm install
+```
+
+4. Start the development server:
+
+```bash
+npm run dev
+```
+
+5. Open the local URL provided by Vite in your browser.
+
+## Backend Integration
+
+The frontend communicates with a Spring Boot REST API.
+
+Default API URL:
+
+```text
+http://localhost:8080
+```
+
+The backend handles employee data operations and database communication.
+
+## Error Handling
+
+The application handles:
+
+- Employee not found (404)
+- Invalid employee input (400)
+- Server connection errors
+- Unexpected API errors
+
+## Build
+
+To create a production build:
+
+```bash
+npm run build
+```
+
+## Future Improvements
+
+- Improve UI/UX
+- Add pagination
+- Add automated testing
+- Improve application security
